@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, InputGroup, FormControl } from 'react-bootstrap'
 
 class SingleBook extends React.Component {
 
@@ -10,7 +10,16 @@ class SingleBook extends React.Component {
     render() {
         return (
             <Card
-                // onClick={() => this.setState({ selected: !this.state.selected })}
+                onClick={() => 
+                <div>
+                <InputGroup>
+                <InputGroup.Prepend>
+                <InputGroup.Text>With textarea</InputGroup.Text>
+                </InputGroup.Prepend>
+                <FormControl as="textarea" aria-label="With textarea" />
+                </InputGroup>
+                </div>
+                }
                 style={{ width:'200px' }}
             >
                 <Card.Img variant="top" src={this.props.book.img} />
