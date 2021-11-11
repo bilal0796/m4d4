@@ -10,16 +10,6 @@ class SingleBook extends React.Component {
     render() {
         return (
             <Card
-                onClick={() => 
-                <div>
-                <InputGroup>
-                <InputGroup.Prepend>
-                <InputGroup.Text>With textarea</InputGroup.Text>
-                </InputGroup.Prepend>
-                <FormControl as="textarea" aria-label="With textarea" />
-                </InputGroup>
-                </div>
-                }
                 style={{ width:'200px' }}
             >
                 <Card.Img variant="top" src={this.props.book.img} />
